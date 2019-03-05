@@ -1,3 +1,49 @@
+# Supported Platforms/OS
+CoManga supports :
+* Android
+* iOS
+* UWP
+
+# Contribution
+Contributing to the project is fairly simple. I'd recommend going through the project structure first thoroughly. As you can see, CoManga is divided into 2 sections, i.e., Comic and Manga. The respective code will go in the provided directories. Please keep in mind that you follow these points :
+- Update the "Changelog.md" and "Changelog.txt" in the specified format. Even if it is a small typo fix or an issue fixed.
+- Every method you create should have your Github username in this format : @Xonshiz (Xonshiz is my Github Handle)
+- Please try to comment the logic wherever possible you're applying because a fellow developer might not understand what you did and why you did it.
+- Whatever functionality you add, please make sure that it runs on every platform. The UI may not be pixel perfect, that's fine.
+
+## Opening An Issue/Requesting A Site
+If your're planning to open an issue for the script or ask for a new feature or anything that requires opening an Issue, then please do keep these things in mind.
+
+### Reporting Issues
+If you're going to report an issue, then please make sure that the application has all the necessary permissions granted and you're connected to a stable internet connection and you have enough storage space.
+
+Please upload a screenshot of the issue, if possible. Please follow this syntax :
+
+**What You're Trying To Download** : Comic Or Manga
+
+**What Went Wrong?** : What happened?
+
+**Your Device's Operating System** : What OS are you on? Android, iOS or UWP.
+
+**Version Number of Application** : Check from the "Settings" Tab and post it here.
+ 
+### Suggesting A Feature
+First things first, please don't make suggestions for these things, as they are already in progress or I have plans of adding them in the application in future.
+- Download all the chapters.
+- Sorting the chapter list.
+- Downloading chapters in a particular range. For Eg : Download 11-16 chapters of a comic/manga.
+
+I don't mean to be rude, but it's such a drag to see the requests for same things over and over again. Please understand. So, if I see any request for either of these things, I'll close the issue immidiately.
+However, if you have suggestions on what can be added to these functionalities, please open an issue for the same.
+
+If you're here to make suggestions, please follow the basic syntax to post a request :
+
+**Subject** : Something that briefly tells us about the feature.
+
+**Long Explanation** : Describe in details what you want and how you want.
+
+This should be enough, but it'll be great if you can add more ;)
+
 # Where to download from?
 Currently, you can download the builds/packages from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) Section only. I do have future plans to push this to various application stores.
 
