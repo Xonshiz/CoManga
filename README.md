@@ -1,5 +1,5 @@
 # Where to download from?
-Currently, you can download the builds/packages from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) Section only.
+Currently, you can download the builds/packages from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) Section only. I do have future plans to push this to various application stores.
 
 # Why is it not on application stores?
 I have plans on putting these on Play Store (Android), Windows App Store and iOS Application Center. But, currently I do not have that kind of money to invest in all of these together. Hopefully by April 2019 end, I'll push this to Google Play Store and Windows Store as well. iOS is costly AF and will take time...A LOT OF TIME. WHY U DO THIS APPLE?!
@@ -32,17 +32,30 @@ If you have an iPhone, connect it to your device via wires (however iPhones are 
 # Installing Apps
 For installing the application on respective OS, follow the guides below.
 #### Android
-Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html)
+Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) section and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html).
+It's as easy as that.
+
 #### iOS
+Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the "How To Compile" section for details.
+
 #### UWP
+UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) section. You can download the application from there and run it like any other application.
 
 # Special Permissions
+Since the application connects to internet and stores files on your system's hard disk, it needs certain permissions from the user. Find the permissions and their usages below :
+
 #### Android
+INTERNET : To access the internet.
+STORAGE : To store files on the disk.
+
 #### iOS
+Calender : Due to apple's policies, we need this. One of the dependency in the application has made this permission necessary. Though, that plugin and this application doesn't use any of this.
+
 #### UWP
+Documents Library, Downloads, Pictures : Trying to store the data.
 
 # Known Issues, Workarounds...
-Download button multiple times.
+Sometimes you'll click the download button and then it'll show "Downloaded" with a blank message. You might have to try to download again. If the problem persists, please feel free to open an issue.
 
 # Why no iOS build? Why do I have to go through such a pain?
 I'll break it down in a very very simple manner. I need to have a developer account to be able to push this application to stores. These are the charges for a developer account on these 3 platforms :
