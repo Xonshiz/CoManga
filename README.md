@@ -1,3 +1,6 @@
+# CoManga
+CoManga is a "Cross-Platform Application" that can download various Comics and Manga for free. The application can run on Android, iOS and UWP.
+
 # Supported Platforms/OS
 CoManga supports :
 * Android
@@ -82,7 +85,7 @@ Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz
 It's as easy as that.
 
 #### iOS
-Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the "How To Compile" section for details.
+Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the "How To Compile" section for details. Note that once you deploy/build the application once on your iOS device, you need not repeat the same steps again and again. It'll install the application on your device, so you can just fire it up and use it.
 
 #### UWP
 UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) section. You can download the application from there and run it like any other application.
