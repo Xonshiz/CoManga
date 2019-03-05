@@ -1,5 +1,14 @@
 # CoManga
-CoManga is a "Cross-Platform Application" that can download various Comics and Manga for free. The application can run on Android, iOS and UWP.
+CoManga is a "Cross-Platform Application" that can download various Comics and Manga for free. The application can run on Android, iOS and UWP. It has features like :
+- Download any Manga You Want.
+- Download any Comic You Want.
+- Support Android, iOS and UWP.
+- Has parallel download support.
+- Shows the latest Manga and Comics.
+- Downloads a Single Chapter and puts in a directory with the Comic/Manga name, volume and chapter.
+- Downloads all the chapters available for a series.
+- Skip if the file has already been downloaded.
+- Show human readable error(s) in most places.
 
 # Supported Platforms/OS
 CoManga supports :
@@ -9,7 +18,7 @@ CoManga supports :
 
 # Contribution
 Contributing to the project is fairly simple. I'd recommend going through the project structure first thoroughly. As you can see, CoManga is divided into 2 sections, i.e., Comic and Manga. The respective code will go in the provided directories. Please keep in mind that you follow these points :
-- Update the "Changelog.md" and "Changelog.txt" in the specified format. Even if it is a small typo fix or an issue fixed.
+- Update the ["Changelog.md"](https://github.com/Xonshiz/CoManga/blob/master/Changelog.md) and "Changelog.txt" in the specified format. Even if it is a small typo fix or an issue fixed.
 - Every method you create should have your Github username in this format : @Xonshiz (Xonshiz is my Github Handle)
 - Please try to comment the logic wherever possible you're applying because a fellow developer might not understand what you did and why you did it.
 - Whatever functionality you add, please make sure that it runs on every platform. The UI may not be pixel perfect, that's fine.
