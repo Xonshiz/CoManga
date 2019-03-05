@@ -1,10 +1,12 @@
 # Where to download from?
+Currently, you can download the builds/packages from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) Section only.
 
 # Why is it not on application stores?
 I have plans on putting these on Play Store (Android), Windows App Store and iOS Application Center. But, currently I do not have that kind of money to invest in all of these together. Hopefully by April 2019 end, I'll push this to Google Play Store and Windows Store as well. iOS is costly AF and will take time...A LOT OF TIME. WHY U DO THIS APPLE?!
 
 # Download Locations?
 Since Xamarin Forms is a cross-platform app. developement framework, there are certain things that you need to do platform dependently and getting correct write permissions to save files and creating directories in custom locations is a little tricky. At least it is for me. So, I'm learning along the way and over the time, you'll definitely get a better experience. So, these are some locations you can find your downloaded Comics/Manga. Check the platform-wise locations :
+![iOS Build](https://github.com/Xonshiz/Comic_dl-Mobile-Application/blob/master/OnlineAssets/macOS_Build.gif?raw=true)
 
 #### Android
 You need to browse to your device's "Internal Storage" and there you'll see a folder named "Comic_DL". Inside that folder you'll find your Comics/Manga under their own respective folders.
@@ -30,7 +32,7 @@ If you have an iPhone, connect it to your device via wires (however iPhones are 
 # Installing Apps
 For installing the application on respective OS, follow the guides below.
 #### Android
-Download the "CoManga.apk" from the [latest releases] and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html)
+Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html)
 #### iOS
 #### UWP
 
