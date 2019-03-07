@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="comic_dl.Pages.misc.Settings"
+             Title="Customize This App">
+    <Grid BackgroundColor="#eceff1"
+          Padding="10"
+          HorizontalOptions="CenterAndExpand"
+          VerticalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               FontSize="Medium"
+               FontAttributes="Italic"
+               Margin="5"
+               Text="Comic-dl is a cross-platform application to download Comics and Manga easily from a single point. You can search Manga from this tool as well. If you want a CLI, go over to my Github and look for Comic-dl." />
+        
+       <Label Text="Version : 2019-03-05"
+              Grid.Row="1"
+              Grid.Column="0"
+              FontSize="Medium"
+              Margin="5"
+              FontAttributes="Italic"/>
+        
+        <Label Text="Author : Xonshiz"
+              Grid.Row="2"
+              Grid.Column="0"
+              FontSize="Medium"
+               Margin="5"
+              FontAttributes="Italic"/>
+        
+        <Label Text="Email : xonshiz@gmail.com"
+              Grid.Row="3"
+              Grid.Column="0"
+              FontSize="Medium"
+               Margin="5"
+              FontAttributes="Italic"/>
+        
+        <Button Text="Github"
+                Clicked="Github_Clicked"
+                Grid.Row="4"
+                Margin="5"
+                Grid.Column="0"/>
+        
+        <Button Text="Report Issue"
+                Clicked="ReportIssue_Clicked"
+                Grid.Row="5"
+                Margin="5"
+                Grid.Column="0"/>
+        
+        <Button Text="Donate"
+                Clicked="Donate_Clicked"
+                Margin="5"
+                Grid.Row="6"
+                Grid.Column="0"/>
+    </Grid>
+</ContentPage>

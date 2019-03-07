@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="comic_dl.Pages.comic.ComicListing"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="Download Comics">
+    <Grid BackgroundColor="#eceff1"
+          Padding="5,5,5,0">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <SearchBar Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="ComicSearchBar"
+                   Placeholder="Search Your Comic..."
+                   SearchButtonPressed="Handle_SearchButtonPressedAsync"
+                   IsVisible="True"
+                   BackgroundColor="#cfd8dc"
+                   CancelButtonColor="#000000"
+                   TextColor="#000000"
+                   FontSize="Medium"
+                   FontAttributes="None"
+                   Margin="0,0,0,5"/>
+        <Frame Grid.Row="1"
+               BackgroundColor="#ffffff"
+               Padding="2"
+               Margin="0,2,0,0">
+            <Grid>
+                <ListView x:Name="PopularTitles_List"
+                  SeparatorColor="LightGray"
+                  HasUnevenRows="True"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="PopularTitles_Refreshing"
+                  ItemSelected="PopularTitles_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal"
+                                         Padding="5"
+                                         HorizontalOptions="StartAndExpand"
+                                         VerticalOptions="StartAndExpand">
+                                    <controls:CircleImage Source="{Binding comicCoverImage}"
+                                                      Aspect="AspectFill"
+                                                      HorizontalOptions="StartAndExpand"
+                                                      BorderColor="#000000"
+                                                      BorderThickness="2">
+                                        <controls:CircleImage.WidthRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android, iOS">55</On>
+                                                <On Platform="WinPhone">75</On>
+                                            </OnPlatform>
+                                        </controls:CircleImage.WidthRequest>
+                                        <controls:CircleImage.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android, iOS">55</On>
+                                                <On Platform="WinPhone">75</On>
+                                            </OnPlatform>
+                                        </controls:CircleImage.HeightRequest>
+                                    </controls:CircleImage>
+                                    <StackLayout Orientation="Vertical"
+                                             HorizontalOptions="StartAndExpand"
+                                             VerticalOptions="StartAndExpand">
+                                        <Label Text="{Binding comicTitle}" VerticalTextAlignment="Start" TextColor="Black"/>
+                                        <Label Text="{Binding comicIssue, StringFormat='Latest Issue : {0:N}'}" VerticalTextAlignment="Start"  TextColor="Gray"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ActivityIndicator x:Name="progressBar"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="#000000"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

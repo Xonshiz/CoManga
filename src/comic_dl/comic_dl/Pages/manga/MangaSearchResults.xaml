@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:Converters="clr-namespace:comic_dl.Converters"
+             x:Class="comic_dl.Pages.manga.MangaSearchResults">
+    <Grid BackgroundColor="#eceff1"
+          Padding="5,5,5,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Frame Grid.Row="0"
+               BackgroundColor="#ffffff"
+               Padding="2"
+               Margin="0,2,0,5">
+            <ListView x:Name="SearchResult_List"
+              SeparatorColor="LightGray"
+              HasUnevenRows="True"
+              ItemSelected ="SearchResult_List_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                             Padding="5"
+                                             HorizontalOptions="StartAndExpand"
+                                             VerticalOptions="StartAndExpand">
+                                    <controls:CircleImage Source="{Binding thumbnail}"
+                                                          Aspect="AspectFill"
+                                                          HorizontalOptions="StartAndExpand"
+                                                          BorderColor="#000000"
+                                                          BorderThickness="2">
+                                        <controls:CircleImage.WidthRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                              <On Platform="Android, iOS">55</On>
+                                              <On Platform="WinPhone">75</On>
+                                            </OnPlatform>
+                                          </controls:CircleImage.WidthRequest>
+                                          <controls:CircleImage.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                              <On Platform="Android, iOS">55</On>
+                                              <On Platform="WinPhone">75</On>
+                                            </OnPlatform>
+                                          </controls:CircleImage.HeightRequest>
+                                    </controls:CircleImage>
+                                    <StackLayout Orientation="Vertical"
+                                                 HorizontalOptions="StartAndExpand"
+                                                 VerticalOptions="StartAndExpand">
+                                        <Label Text="{Binding name}" VerticalTextAlignment="Start" TextColor="Black"/>
+                                        <Label Text="{Binding total_chapters, StringFormat='Total Chapters : {0:N}'}" VerticalTextAlignment="Start"  TextColor="Gray"/>
+                                    </StackLayout>
+                                    <Image Source="ic_completed.png" Margin="2" HorizontalOptions="End" VerticalOptions="StartAndExpand" WidthRequest="10" HeightRequest="10" IsVisible="{Binding completed}" />
+                                    <Image Source="ic_ongoing.png" Margin="2" HorizontalOptions="End" VerticalOptions="StartAndExpand" WidthRequest="10" HeightRequest="10" IsVisible="{Binding completed, Converter={Converters:InverseBoolConverter}}" />
+                                </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
+    </Grid>
+</ContentPage>

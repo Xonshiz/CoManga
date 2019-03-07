@@ -1,0 +1,106 @@
+{
+  "images": [
+    {
+      "idiom": "universal"
+    },
+    {
+      "filename": "ic_manga@1x-4.png",
+      "scale": "1x",
+      "idiom": "universal"
+    },
+    {
+      "filename": "ic_manga@2x-6.png",
+      "scale": "2x",
+      "idiom": "universal"
+    },
+    {
+      "filename": "ic_manga@3x-3.png",
+      "scale": "3x",
+      "idiom": "universal"
+    },
+    {
+      "idiom": "iphone"
+    },
+    {
+      "filename": "ic_manga@1x.png",
+      "scale": "1x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "ic_manga@2x.png",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "subtype": "retina4",
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "filename": "ic_manga@3x.png",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "idiom": "ipad"
+    },
+    {
+      "filename": "ic_manga@1x-1.png",
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "filename": "ic_manga@2x-1.png",
+      "scale": "2x",
+      "idiom": "ipad"
+    },
+    {
+      "idiom": "watch"
+    },
+    {
+      "filename": "ic_manga@2x-2.png",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "screenWidth": "{130,145}",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "screenWidth": "{146,165}",
+      "scale": "2x",
+      "idiom": "watch"
+    },
+    {
+      "idiom": "mac"
+    },
+    {
+      "filename": "ic_manga@1x-2.png",
+      "scale": "1x",
+      "idiom": "mac"
+    },
+    {
+      "filename": "ic_manga@2x-3.png",
+      "scale": "2x",
+      "idiom": "mac"
+    },
+    {
+      "idiom": "car"
+    },
+    {
+      "filename": "ic_manga@2x-4.png",
+      "scale": "2x",
+      "idiom": "car"
+    },
+    {
+      "filename": "ic_manga@3x-1.png",
+      "scale": "3x",
+      "idiom": "car"
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

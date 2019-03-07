@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:comic_dl;assembly=comic_dl"
+            xmlns:comic="clr-namespace:comic_dl.Pages.comic"
+            xmlns:manga="clr-namespace:comic_dl.Pages"
+            xmlns:misc="clr-namespace:comic_dl.Pages.misc"
+            x:Class="comic_dl.MainPage"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="White"
+            BarTextColor="Black">
+    <TabbedPage.Children>
+        <manga:MangaListing Title="Manga" Icon="ic_manga.png" />
+        <comic:ComicListing Title="Comic" Icon="ic_comic.png" />
+        <misc:Settings Title="Settings" Icon="ic_settings.png" />
+    </TabbedPage.Children>
+</TabbedPage>
+

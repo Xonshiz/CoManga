@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="comic_dl.Pages.MangaListing"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:Converters="clr-namespace:comic_dl.Converters"
+             Title="Download Manga">
+    <Grid BackgroundColor="#eceff1"
+          Padding="5,5,5,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <SearchBar Grid.Row="0"
+                   Grid.Column="0"
+                   x:Name="MangaSearchBar"
+                   Placeholder="Search Your Manga..."
+                   SearchButtonPressed="Handle_SearchButtonPressedAsync"
+                   IsVisible="True"
+                   BackgroundColor="#cfd8dc"
+                   CancelButtonColor="#000000"
+                   TextColor="#000000"
+                   FontSize="Medium"
+                   FontAttributes="None"
+                   Margin="0,0,0,0"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*" />
+                <RowDefinition Height=".5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Frame  Grid.Row="0"
+                BackgroundColor="#ffffff"
+                Padding="2"
+                Margin="0,5,0,2">
+                <StackLayout Margin="0,0,0,0">
+                    <StackLayout Orientation="Horizontal"
+                             Margin="5">
+                        <Label Text="Hot Items" FontSize="Medium" FontAttributes="Bold"/>
+                        <Image Source="ic_whatshot.png" WidthRequest="20" HeightRequest="20" />
+                    </StackLayout>
+                    <BoxView HeightRequest="1"
+                         Color="#90a4ae"
+                         CornerRadius="5"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="Start"
+                         WidthRequest="200"
+                         Margin="0,1,0,1"/>
+                    <cards:CarouselView Margin="0,2,0,0"
+                                    x:Name="LatestUpdatedChapter_List" 
+                                    SelectedItem="LatestUpdatedChapter_ItemSelected">
+                        <cards:CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <ContentView>
+                                    <Frame VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="CenterAndExpand"
+                                       HeightRequest="300"
+                                       WidthRequest="300"
+                                       Padding="0" 
+                                       HasShadow="false"
+                                       IsClippedToBounds="true"
+                                       CornerRadius="10">
+
+                                        <StackLayout Orientation="Vertical"
+                                                 Padding="5,5,5,0"
+                                                 VerticalOptions="CenterAndExpand"
+                                                 HorizontalOptions="CenterAndExpand">
+                                            <ImageButton Clicked="LatestUpdatedChapter_ItemSelected"
+                                                     CommandParameter="{Binding oid}"
+                                                     Source="{Binding thumbnail}"
+                                                     BackgroundColor="White"
+                                                     Margin="0,0,0,1"/>
+                                            <Label Text="{Binding name}" VerticalTextAlignment="Start" TextColor="#000000" FontSize="Small" Margin="0,1,0,1" />
+                                        </StackLayout>
+
+                                    </Frame>
+                                </ContentView>
+                            </DataTemplate>
+                        </cards:CarouselView.ItemTemplate>
+                    </cards:CarouselView>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame Grid.Row="1"
+               BackgroundColor="#ffffff"
+               Padding="2"
+               Margin="0,2,0,0">
+                <StackLayout Margin="0,0,0,0">
+                    <StackLayout Orientation="Horizontal"
+                             Margin="5">
+                        <Label Text="Latest Items" FontSize="Medium" FontAttributes="Bold"/>
+                        <Image Source="ic_latest.png" WidthRequest="20" HeightRequest="20" />
+                    </StackLayout>
+                    <BoxView HeightRequest="1"
+                         Color="#90a4ae"
+                         CornerRadius="5"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="Start"
+                         WidthRequest="200"
+                         Margin="0,1,0,1"/>
+                    <ListView x:Name="LatestItems_List"
+                  SeparatorColor="LightGray"
+                  HasUnevenRows="True"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="LatestItems_List_Refreshing"
+                  ItemSelected="LatestItems_List_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal"
+                                             Padding="5"
+                                             HorizontalOptions="StartAndExpand"
+                                             VerticalOptions="StartAndExpand">
+                                        <controls:CircleImage Source="{Binding thumbnail}"
+                                                          Aspect="AspectFill"
+                                                          HorizontalOptions="StartAndExpand"
+                                                          BorderColor="#000000"
+                                                          BorderThickness="2">
+                                            <controls:CircleImage.WidthRequest>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On Platform="Android, iOS">55</On>
+                                                    <On Platform="WinPhone">75</On>
+                                                </OnPlatform>
+                                            </controls:CircleImage.WidthRequest>
+                                            <controls:CircleImage.HeightRequest>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On Platform="Android, iOS">55</On>
+                                                    <On Platform="WinPhone">75</On>
+                                                </OnPlatform>
+                                            </controls:CircleImage.HeightRequest>
+                                        </controls:CircleImage>
+                                        <StackLayout Orientation="Vertical"
+                                                 HorizontalOptions="StartAndExpand"
+                                                 VerticalOptions="StartAndExpand">
+                                            <Label Text="{Binding name}" VerticalTextAlignment="Start" TextColor="Black"/>
+                                            <Label Text="{Binding updated_at, StringFormat='Updated At : {0:MMMM dd, yyyy}'}" VerticalTextAlignment="Start"  TextColor="Gray"/>
+                                        </StackLayout>
+                                        <Image Source="ic_completed.png" Margin="2" HorizontalOptions="End" VerticalOptions="StartAndExpand" WidthRequest="10" HeightRequest="10" IsVisible="{Binding completed}" />
+                                        <Image Source="ic_ongoing.png" Margin="2" HorizontalOptions="End" VerticalOptions="StartAndExpand" WidthRequest="10" HeightRequest="10" IsVisible="{Binding completed, Converter={Converters:InverseBoolConverter}}" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <ActivityIndicator x:Name="progressBarHotItems"
+                           Grid.RowSpan="2"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="#000000"/>
+    </Grid>
+</ContentPage>

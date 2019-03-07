@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CardsView" Version="2.0.3" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Refit" Version="4.6.90" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.13.2" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.13.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="customRenderer\" />
+    <Folder Include="Images\" />
+    <Folder Include="dependencyServices\" />
+    <Folder Include="webScrapper\comic\" />
+    <Folder Include="webScrapper\manga\" />
+    <Folder Include="Converters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\comic\ComicDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\comic\ComicListing.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\comic\ComicSearchResults.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\manga\MangaDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\manga\MangaListing.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\manga\MangaSearchResults.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\misc\Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="parsers\ComicImagesStructure.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="images\Batman.png" />
+    <None Remove="images\calendar-alt.svg" />
+    <None Remove="images\download.svg" />
+    <None Remove="images\fire-alt.svg" />
+    <None Remove="images\info-circle.svg" />
+    <None Remove="images\info.svg" />
+    <None Remove="images\Manga.png" />
+    <None Remove="images\tools.svg" />
+    <None Remove="Batman.png" />
+    <None Remove="Manga.jpg" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="comic_dl.Pages.comic.ComicDetails"
+             xmlns:ads="clr-namespace:comic_dl.Controls;assembly=comic_dl">
+    <StackLayout>
+        <ScrollView>
+            <Grid BackgroundColor="#eceff1"
+          Padding="5,5,5,0"
+          RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="myBackgroundImage" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+                
+                        <BoxView Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#000000" Opacity="0.5"/>
+                        <Label Grid.Row="0"
+                       Grid.Column="0"
+                       x:Name="showTitle"
+                       TextColor="#ffffff"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                        <Frame Grid.Row="1"
+               Grid.Column="0"
+               BackgroundColor="#ffffff"
+               Padding="2"
+               Margin="0,2,0,2">
+                            <Grid Padding="2"
+                  Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".3*" />
+                                    <ColumnDefinition Width=".7*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="0" Orientation="Vertical">
+                                    <Label Text="Author(s) : " FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="Genre : " FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="Description : " FontSize="Medium" FontAttributes="Bold"/>
+                                </StackLayout>
+
+                                <StackLayout Grid.Column="1"
+                              Orientation="Vertical">
+                                    <Label x:Name="authorName" FontSize="Small" FontAttributes="None"/>
+                                    <Label x:Name="genresComic" FontSize="Small" FontAttributes="None"/>
+                                    <Label x:Name="description" Margin="0,0,0,2" FontSize="Small" FontAttributes="None"/>
+                                </StackLayout>
+                            </Grid>
+
+                        </Frame>
+
+                        <Frame Grid.Row="2"
+               Grid.Column="0"
+               BackgroundColor="#ffffff"
+               Padding="2"
+               Margin="0,2,0,2">
+
+                            <ListView x:Name="ComicChapters_List"
+                      SeparatorColor="DarkGray"
+                      HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="ComicChapters_Refreshing"
+                      ItemSelected="ComicChapters_ItemSelected">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal"
+                                             Padding="5"
+                                             HorizontalOptions="StartAndExpand"
+                                             VerticalOptions="StartAndExpand">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding chapterTitle}" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" TextColor="Black"/>
+                                                    <Button Grid.Row="0" Grid.Column="1" Text="Download" VerticalOptions="Center" HorizontalOptions="Center" CommandParameter="{Binding chapterLink}" Clicked="ComicDownloadButton_Clicked" />
+                                                </Grid>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Frame>
+
+                <ActivityIndicator x:Name="progressBar"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="#000000"/>
+            </Grid>
+        </ScrollView>
+        <Frame BackgroundColor="#ffffff"
+               Padding="2"
+               Margin="0,2,0,2">
+            <ads:AdControlView BackgroundColor="Green" />
+        </Frame>
+    </StackLayout>
+    
+    
+</ContentPage>

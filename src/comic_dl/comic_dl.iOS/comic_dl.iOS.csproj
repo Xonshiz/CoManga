@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D7C3B75-6013-49EA-88C2-A6B1CE3DA87F}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>comic_dl.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>comic_dl.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Owners>Xonshiz</Owners>
+    <PackageProjectUrl>https://github.com/Xonshiz/CoManga</PackageProjectUrl>
+    <Title>CoManga</Title>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="dependencyServices\DirectoryHelper.cs" />
+    <Compile Include="dependencyServices\SQLiteDb.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="customRenderer\AdViewRenderer.cs" />
+    <Compile Include="customRenderer\MangaAdViewRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%402x-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_ongoing.imageset\ic_ongoing%403x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%402x-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_completed.imageset\ic_completed%403x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%402x-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_latest.imageset\ic_latest%403x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%402x-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_whatshot.imageset\ic_whatshot%403x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%402x-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_download.imageset\ic_download%403x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%402x-5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_settings.imageset\ic_settings%403x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%401x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%402x-6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%403x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%401x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_comic.imageset\ic_comic%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%401x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%402x-6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%403x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%401x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%402x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%401x-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%402x-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_manga.imageset\ic_manga%402x-4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-40x40%401x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-29x29%402x %281%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-40x40%401x-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-40x40%402x %281%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-58-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-87-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-40x40%403x %281%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-80-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-32-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-64.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-48.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-55.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-88.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-100.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-172.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-196.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-1024-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-1024-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-256-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-512-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CardsView">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.9.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Refit">
+      <Version>4.6.90</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+    <PackageReference Include="Xamarin.Google.iOS.MobileAds">
+      <Version>7.38.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\comic_dl\comic_dl.csproj">
+      <Project>{6F7C4A34-BF3F-4EE7-9CF7-0D1BAD1DA88B}</Project>
+      <Name>comic_dl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="customRenderer\" />
+    <Folder Include="images\" />
+    <Folder Include="Assets.xcassets\ic_comic.imageset\" />
+    <Folder Include="Assets.xcassets\ic_manga.imageset\" />
+    <Folder Include="Assets.xcassets\ic_ongoing.imageset\" />
+    <Folder Include="Assets.xcassets\ic_completed.imageset\" />
+    <Folder Include="Assets.xcassets\ic_latest.imageset\" />
+    <Folder Include="Assets.xcassets\ic_whatshot.imageset\" />
+    <Folder Include="Assets.xcassets\ic_download.imageset\" />
+    <Folder Include="Assets.xcassets\ic_settings.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_completed%401x.png" />
+    <BundleResource Include="Resources\ic_completed%402x.png" />
+    <BundleResource Include="Resources\ic_completed%403x.png" />
+    <BundleResource Include="Resources\ic_ongoing%401x.png" />
+    <BundleResource Include="Resources\ic_ongoing%402x.png" />
+    <BundleResource Include="Resources\ic_ongoing%403x.png" />
+    <BundleResource Include="Resources\ic_latest%401x.png" />
+    <BundleResource Include="Resources\ic_latest%402x.png" />
+    <BundleResource Include="Resources\ic_latest%403x.png" />
+    <BundleResource Include="Resources\ic_whatshot%401x.png" />
+    <BundleResource Include="Resources\ic_whatshot%402x.png" />
+    <BundleResource Include="Resources\ic_whatshot%403x.png" />
+    <BundleResource Include="Resources\ic_settings%401x.png" />
+    <BundleResource Include="Resources\ic_settings%402x.png" />
+    <BundleResource Include="Resources\ic_settings%403x.png" />
+    <BundleResource Include="Resources\ic_download%401x.png" />
+    <BundleResource Include="Resources\ic_download%402x.png" />
+    <BundleResource Include="Resources\ic_download%403x.png" />
+    <BundleResource Include="Resources\ic_comic%401x.png" />
+    <BundleResource Include="Resources\ic_comic%402x.png" />
+    <BundleResource Include="Resources\ic_comic%403x.png" />
+    <BundleResource Include="Resources\ic_manga%401x.png" />
+    <BundleResource Include="Resources\ic_manga%402x.png" />
+    <BundleResource Include="Resources\ic_manga%403x.png" />
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+</Project>
