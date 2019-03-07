@@ -1,4 +1,6 @@
-# CoManga
+[![N|Solid](https://github.com/Xonshiz/CoManga/blob/master/OnlineAssets/text_logo.png?raw=true)](https://github.com/Xonshiz/CoManga/)
+# CoManga | [![Build Status](https://travis-ci.org/Xonshiz/CoManga.svg?branch=master)](https://travis-ci.org/Xonshiz/CoManga) [![Documentation Status](https://readthedocs.org/projects/CoManga/badge/?version=latest)](http://CoManga.readthedocs.io/en/latest/?badge=latest) | [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/xonshiz)  | [![GitHub release](https://img.shields.io/github/release/xonshiz/CoManga.svg?style=flat-square)](https://github.com/xonshiz/CoManga/releases/latest) | [![Github All Releases](https://img.shields.io/github/downloads/xonshiz/CoManga/total.svg?style=flat-square)](https://github.com/xonshiz/CoManga/releases)
+
 CoManga is a "Cross-Platform Application" that can download various Comics and Manga for free. The application can run on Android, iOS and UWP. It has features like :
 - Download any Manga You Want.
 - Download any Comic You Want.
@@ -57,14 +59,13 @@ If you're here to make suggestions, please follow the basic syntax to post a req
 This should be enough, but it'll be great if you can add more ;)
 
 # Where to download from?
-Currently, you can download the builds/packages from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) Section only. I do have future plans to push this to various application stores.
+Currently, you can download the builds/packages from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) Section only. I do have future plans to push this to various application stores.
 
 # Why is it not on application stores?
 I have plans on putting these on Play Store (Android), Windows App Store and iOS Application Center. But, currently I do not have that kind of money to invest in all of these together. Hopefully by April 2019 end, I'll push this to Google Play Store and Windows Store as well. iOS is costly AF and will take time...A LOT OF TIME. WHY U DO THIS APPLE?!
 
 # Download Locations?
 Since Xamarin Forms is a cross-platform app. developement framework, there are certain things that you need to do platform dependently and getting correct write permissions to save files and creating directories in custom locations is a little tricky. At least it is for me. So, I'm learning along the way and over the time, you'll definitely get a better experience. So, these are some locations you can find your downloaded Comics/Manga. Check the platform-wise locations :
-![iOS Build](https://github.com/Xonshiz/Comic_dl-Mobile-Application/blob/master/OnlineAssets/macOS_Build.gif?raw=true)
 
 #### Android
 You need to browse to your device's "Internal Storage" and there you'll see a folder named "Comic_DL". Inside that folder you'll find your Comics/Manga under their own respective folders.
@@ -80,24 +81,31 @@ Getting the permissions is a little tricky in UWP. I've literally tried a lot of
 `Put UWP Location Here`
 
 # How To Compile
-Install Visual Studio (Recommended Version : 2017). You can install Visual Studio Community version as well, it'll work just fine. Open this project in Visual Studio. Depending upon your device OS, follow these steps :
+Install Visual Studio (Recommended Version : 2017). You can install Visual Studio Community version as well, it'll work just fine. Clone this repository, open this project in Visual Studio. Depending upon your device OS, follow these steps :
 #### Android
+
+![Android Build](https://github.com/Xonshiz/CoManga/blob/master/OnlineAssets/android_deploying.gif?raw=true)
+
 #### iOS
 If you have an iPhone, connect it to your device via wires (however iPhones are connected to a system). Or, if you don't have an iPhone, you need macOS to build this. You'll also need to install and updated "XCODE". Then follow this .gif :
 
+![iOS Build](https://github.com/Xonshiz/CoManga/blob/master/OnlineAssets/ios_deploying.gif?raw=true)
+
 #### UWP
+To compile, you can run it like this :
+![UWP Build](https://github.com/Xonshiz/CoManga/blob/master/OnlineAssets/uwp_deploying.gif?raw=true)
 
 # Installing Apps
 For installing the application on respective OS, follow the guides below.
 #### Android
-Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) section and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html).
+Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html).
 It's as easy as that.
 
 #### iOS
 Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the "How To Compile" section for details. Note that once you deploy/build the application once on your iOS device, you need not repeat the same steps again and again. It'll install the application on your device, so you can just fire it up and use it.
 
 #### UWP
-UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/Comic_dl-Mobile-Application/releases/latest) section. You can download the application from there and run it like any other application.
+UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section. You can download the application from there and run it like any other application.
 
 # Special Permissions
 Since the application connects to internet and stores files on your system's hard disk, it needs certain permissions from the user. Find the permissions and their usages below :
