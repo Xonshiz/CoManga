@@ -23,7 +23,7 @@ namespace comic_dl.iOS.customRenderer
             {
                 adView = new BannerView(AdSizeCons.SmartBannerPortrait)
                 {
-                    AdUnitID = "ca-app-pub-3940256099942544/6300978111",
+                    AdUnitID = "ca-app-pub-8359860011604747/6645753845",
                     RootViewController = GetRootViewController()
                 };
 
