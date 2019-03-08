@@ -1,0 +1,6 @@
+MainPackage=C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\ARM\Release\comic_dl.UWP_1.0.0.0_ARM.appx
+SymbolPackage=C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\AppPackages\comic_dl.UWP_1.0.0.0_Test\comic_dl.UWP_1.0.0.0_ARM.appxsym
+ResourcePack=C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\ARM\Release\comic_dl.UWP_1.0.0.0_scale-100.appx
+ResourcePack=C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\ARM\Release\comic_dl.UWP_1.0.0.0_scale-125.appx
+ResourcePack=C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\ARM\Release\comic_dl.UWP_1.0.0.0_scale-150.appx
+ResourcePack=C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\ARM\Release\comic_dl.UWP_1.0.0.0_scale-400.appx

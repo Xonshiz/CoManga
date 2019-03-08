@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</Source>
+    <SmallTileSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</SmallTileSource>
+    <MediumTileSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</MediumTileSource>
+    <WideTileSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</WideTileSource>
+    <LargeTileSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</LargeTileSource>
+    <AppIconSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</AppIconSource>
+    <SplashScreenSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\Xonshiz\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\logo.png</PackageLogoSource>
+    <AppxPackageIsForStore>False</AppxPackageIsForStore>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
+    <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+</Project>
