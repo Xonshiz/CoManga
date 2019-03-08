@@ -180,3 +180,12 @@ Sometimes you'll click the download button and then it'll show "Downloaded" with
 
 # CoManga Has Advertisements. Why?
 So, this was a big decision for me to make. If you read the "Why No iOS Build?" section, you'll see that I need money to get an iOS developer account. Donations are always open, but I do need some extra cash and donations aren't much. So, I'll try to save and invest some in it. Don't worry, as the advertisements are just small banners. I promise that no ad will "pop up" or get in your way. I understand it's annoying. So, you will NEVER get those kinds of ads, if you use from this source.
+
+# Donations
+You can always send some money over from this :
+
+Paypal : [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/xonshiz)
+
+Patreon Link : https://www.patreon.com/xonshiz
+
+Any amount is appreciated :)
