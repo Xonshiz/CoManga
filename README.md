@@ -18,7 +18,7 @@ CoManga is a "Cross-Platform Application" that can download various Comics and M
 * [Where To Download CoManga From?](#where-to-download-comanga-from)
 * [Where Does CoManga Place The Files I Download?](#where-does-comanga-place-the-files-i-download)
 * [Why Is It Not On Application Stores?](#why-is-it-not-on-application-stores)
-* [Why No iOS build? Why do I Have To Go Through Such A Pain?](#Why No iOS build? Why do i-have-to-go-through-such-a-pain)
+* [Why No iOS build? Why do I Have To Go Through Such A Pain?](#why-no-ios-build-why-do-i-have-to-go-through-such-a-pain)
 * [Installing The Application](#installing-the-application)
 * [Special Permissions](#special-permissions)
 * [Opening An Issue/Requesting A Feature](#opening-an-issuerequesting-a-feature)
@@ -50,7 +50,7 @@ Currently, you can download the Android and UWP (Windows 10) builds/packages fro
 Since Xamarin Forms is a cross-platform app. developement framework, there are certain things that you need to do platform dependently and getting correct write permissions to save files and creating directories in custom locations is a little tricky. At least it is for me. So, I'm learning along the way and over the time, you'll definitely get a better experience. So, these are some locations you can find your downloaded Comics/Manga. Check the platform-wise locations :
 
 #### Android
-You need to browse to your device's "Internal Storage" and there you'll see a folder named "Comic_DL". Inside that folder you'll find your Comics/Manga under their own respective folders.
+You need to browse to your device's "Internal Storage" and there you'll see a folder named "CoManga". Inside that folder you'll find your Comics/Manga under their own respective folders.
 
 #### iOS
 If you're on iOS, then you're compiling the project and the files will be stored in temp folders of the Simulator. There are multiple steps to this. First, make sure you sort all the folders based on "Last Modified". After that, go to this location :
@@ -75,13 +75,17 @@ I'll break it down in a very very simple manner. I need to have a developer acco
 So, I do not make that kind of money and I hope you got the picture why this is not on iOS Stores. Plus, you need an apple device to build the distributable package. I use a Lenovo Laptop for god's sake. But, borrowing a Mac shouldn't be THAT hard, getting the money for the iOS developer account is though.
 
 # Installing The Application
+You need to have certain tools beforehand. So,get :
+1.) Visual Studio (Community Version Will Do).
+2.) Xamarin
+
 For installing the application on respective OS, follow the guides below.
 #### Android
-Download the "CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html).
+Download the "com.xonshiz.CoManga.apk" from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section and install as you would install any other apk. You might have to switch on [Allow App Installations From Third Party Vendor](http://www.inbox.com/article/how-do-enable-third-party-apps-on-android.html).
 It's as easy as that.
 
 #### iOS
-Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the "How To Compile" section for details. Note that once you deploy/build the application once on your iOS device, you need not repeat the same steps again and again. It'll install the application on your device, so you can just fire it up and use it.
+Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the ["How To Compile"](#how-to-compile) section for details. Note that once you deploy/build the application once on your iOS device, you need not repeat the same steps again and again. It'll install the application on your device, so you can just fire it up and use it.
 
 #### UWP
 UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section. You can download the application from there and run it like any other application.
@@ -92,6 +96,7 @@ Since the application connects to internet and stores files on your system's har
 
 #### Android
 INTERNET : To access the internet.
+
 STORAGE : To store files on the disk.
 
 #### iOS
@@ -101,7 +106,7 @@ Calender : Due to apple's policies, we need this. One of the dependency in the a
 Documents Library, Downloads, Pictures : Trying to store the data.
 
 
-## Opening An Issue/Requesting A Site
+## Opening An Issue/Requesting A Feature
 If your're planning to open an issue for the script or ask for a new feature or anything that requires opening an Issue, then please do keep these things in mind.
 
 ### Reporting Issues
@@ -139,7 +144,7 @@ This should be enough, but it'll be great if you can add more ;)
 The current application takes ["MangaRock"](https://mangarock.com/) as a source for Manga and ["ReadComicsOnline.Me"](https://readcomicsonline.me/) as a source for fetching Comics. These are subjected to change if anything goes down or there some issue. But, for now, we'll go with these two. I initially wanted to go with ["Readcomiconline.To"](https://readcomiconline.to/) as a source for Comics, but it runs behind CloudFlare and it's a hassle to bypass it. Sure, comic-dl cli implements it and thanks to anorov's cf-scrape, it all works. But, it's not a C# based solution. And Believe me, if you've worked with Xamarin, it's a real hassle to deal with a lot of times. So, in short, I didn't want to over complicate things with CloudFlare, so in the end, I went with ReadComicsOnline.Me as a source for comics.
 
 # What if I Want To Download From Somewhere Else?
-Currently there is no such functionality in this version of the application. However, in the future, I have plans of adding this functionality. It might be limited, but it'll be there. For now, you can directly search your required Comic or Manga from the Search Bar in the respective sections and download the comics. If for some reason, the comic/manga you're looking for is not available on either of the platforms, you can head to comic-dl cli.
+Currently there is no such functionality in this version of the application. However, in the future, I have plans of adding this functionality. It might be limited, but it'll be there. For now, you can directly search your required Comic or Manga from the Search Bar in the respective sections and download the comics. If for some reason, the comic/manga you're looking for is not available on either of the platforms, you can head to [comic-dl cli](https://github.com/Xonshiz/comic_dl).
 
 # How Long Till We Can Download From Custom Websites?
 No Clue. Could be next week, could be next month, or could be next year. Depends on the amount of time I have and the motivation I have to work on this. Btw, you're all welcome to pull this, work on it and send Pull Requests.
