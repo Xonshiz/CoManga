@@ -1,1 +1,2 @@
 - Initial Code Commit For CoManga [2019.03.05]
+- Added download location for UWP [2019.03.11]
