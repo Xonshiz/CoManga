@@ -60,7 +60,7 @@ You should get your downloaded items there.
 
 #### UWP
 Getting the permissions is a little tricky in UWP. I've literally tried a lot of different things and couldn't get it to work. So, you'll have to work hard to get these downloaded files. You can find them in this location :
-`Put UWP Location Here`
+`C:\Users\{Your User Name}\AppData\Local\Packages\8c5bdaa1-7509-4aca-bd99-321c57de3c9f_0b312jg1at2fy\LocalState\CoManga`
 
 
 # Why Is It Not On Application Stores?
