@@ -155,7 +155,7 @@ Anyways, the main point was that Xamarin.Forms is a "Cross-Platform" Mobile Deve
 
 # Contributing To CoManga
 Contributing to the project is fairly simple. I'd recommend going through the project structure first thoroughly. As you can see, CoManga is divided into 2 sections, i.e., Comic and Manga. The respective code will go in the provided directories. Please keep in mind that you follow these points :
-- Update the ["Changelog.md"](https://github.com/Xonshiz/CoManga/blob/master/Changelog.md) and ["docs/Changelog.txt"](https://github.com/Xonshiz/CoManga/blob/master/docs/index.md) in the specified format. Even if it is a small typo fix or an issue fixed.
+- Update the ["Changelog.md"](https://github.com/Xonshiz/CoManga/blob/master/Changelog.md) and ["docs/Changelog.rst"](https://github.com/Xonshiz/CoManga/blob/master/docs/changelog.rst) in the specified format. Even if it is a small typo fix or an issue fixed.
 - Every method you create should have your Github username in this format : @Xonshiz (Xonshiz is my Github Handle)
 - Please try to comment the logic wherever possible you're applying because a fellow developer might not understand what you did and why you did it.
 - Whatever functionality you add, please make sure that it runs on every platform. The UI may not be pixel perfect, that's fine.
