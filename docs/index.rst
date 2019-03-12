@@ -5,13 +5,17 @@ CoManga
 
 CoManga is a "Cross-Platform Application" that can download various
 Comics and Manga for free. The application can run on Android, iOS and
-UWP. It has features like : - Download any Manga You Want. - Download
-any Comic You Want. - Support Android, iOS and UWP. - Has parallel
-download support. - Shows the latest Manga and Comics. - Downloads a
-Single Chapter and puts in a directory with the Comic/Manga name, volume
-and chapter. - Downloads all the chapters available for a series. - Skip
-if the file has already been downloaded. - Show human readable error(s)
-in most places.
+UWP. It has features like :
+
+ - Download any Manga You Want. 
+ - Download any Comic You Want. 
+ - Support Android, iOS and UWP. 
+ - Has parallel download support. 
+ - Shows the latest Manga and Comics. 
+ - Downloads a Single Chapter and puts in a directory with the Comic/Manga name, volume and chapter. 
+ - Downloads all the chapters available for a series. 
+ - Skip if the file has already been downloaded. 
+ - Show human readable error(s) in most places.
 
 Table of Content
 ----------------
@@ -43,7 +47,10 @@ Table of Content
 Supported Platforms/OS
 ======================
 
-CoManga supports : \* Android \* iOS \* UWP
+CoManga supports :
+ - Android 
+ - iOS 
+ - UWP
 
 Where To Download CoManga From?
 ===============================
@@ -90,7 +97,7 @@ UWP
 Getting the permissions is a little tricky in UWP. I've literally tried
 a lot of different things and couldn't get it to work. So, you'll have
 to work hard to get these downloaded files. You can find them in this
-location : ``Put UWP Location Here``
+location : ``C:\Users\{Your User Name}\AppData\Local\Packages\8c5bdaa1-7509-4aca-bd99-321c57de3c9f_0b312jg1at2fy\LocalState\CoManga``
 
 Why Is It Not On Application Stores?
 ====================================
@@ -121,9 +128,8 @@ Installing The Application
 ==========================
 
 You need to have certain tools beforehand. So,get :
-1.) Visual Studio
-(Community Version Will Do).
-2.) Xamarin
+ - Visual Studio (Community Version Will Do).
+ - Xamarin
 
 For installing the application on respective OS, follow the guides
 below. #### Android Download the "com.xonshiz.CoManga.apk" from the
