@@ -160,7 +160,7 @@ UWP
 UWP app is also available in the `Latest
 Releases <https://github.com/Xonshiz/CoManga/releases/latest>`__
 section. You can download the application from there and run it like any
-other application.
+other application. You need to download "UWP.CoManga.zip" file and extract it somewhere. Then double click on "comic_dl.UWP_1.0.0.0_x86_x64_arm.appxbundle" and when windows prompts, click on "INSTALL". You're done.
 
 Special Permissions
 ===================
