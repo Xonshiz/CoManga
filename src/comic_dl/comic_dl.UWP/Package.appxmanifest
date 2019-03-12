@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
          xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
          xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
@@ -41,6 +40,5 @@
     <uap3:Capability Name="remoteSystem" />
     <uap:Capability Name="picturesLibrary" />
     <uap:Capability Name="videosLibrary" />
-    <rescap:Capability Name="broadFileSystemAccess" />
   </Capabilities>
 </Package>
