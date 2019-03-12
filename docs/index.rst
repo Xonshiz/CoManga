@@ -27,8 +27,6 @@ Table of Content
 -  `Installing The Application <#installing-the-application>`__
 -  `Special Permissions <#special-permissions>`__
 -  `Opening An Issue/Requesting A Feature <#opening-an-issue-requesting-a-feature>`__
-   -  `Reporting Issues <#reporting-issues>`__
-   -  `Suggesting A Feature <#suggesting-a-feature>`__
 -  `What are the sources for CoManga? <#what-are-the-sources-for-comanga>`__
 -  `What if I Want To Download From Somewhere Else? <#what-if-i-want-to-download-from-somewhere-else>`__
 -  `How Long Till We Can Download From Custom Websites? <#how-long-till-we-can-download-from-custom-websites>`__
