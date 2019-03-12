@@ -132,7 +132,12 @@ You need to have certain tools beforehand. So,get :
  - Xamarin
 
 For installing the application on respective OS, follow the guides
-below. #### Android Download the "com.xonshiz.CoManga.apk" from the
+below.
+
+Android
+^^^
+
+Download the "com.xonshiz.CoManga.apk" from the
 `Latest Releases <https://github.com/Xonshiz/CoManga/releases/latest>`__
 section and install as you would install any other apk. You might have
 to switch on `Allow App Installations From Third Party
@@ -183,7 +188,8 @@ UWP
 
 Documents Library, Downloads, Pictures : Trying to store the data.
 
-Opening An Issue/Requesting A Feature
+
+Opening An Issue Or Requesting A Feature
 -------------------------------------
 
 If your're planning to open an issue for the script or ask for a new
@@ -312,12 +318,17 @@ How To Compile
 Install Visual Studio (Recommended Version : 2017). You can install
 Visual Studio Community version as well, it'll work just fine. Clone
 this repository, open this project in Visual Studio. Depending upon your
-device OS, follow these steps : #### Android
+device OS, follow these steps :
+
+Android
+^^^
 
 .. figure:: https://github.com/Xonshiz/CoManga/blob/master/OnlineAssets/android_deploying.gif?raw=true
    :alt: Android Build
 
    Android Build
+
+
 iOS
 ^^^
 
@@ -330,10 +341,18 @@ need macOS to build this. You'll also need to install and updated
    :alt: iOS Build
 
    iOS Build
+
+
 UWP
 ^^^
 
-To compile, you can run it like this : |UWP Build|
+To compile, you can run it like this :
+
+.. figure:: https://github.com/Xonshiz/CoManga/raw/master/OnlineAssets/uwp_deploying.gif?raw=true
+   :alt: iOS Build
+
+   UWP Build
+
 
 Know Issues/Workarounds
 =======================
