@@ -1,5 +1,7 @@
-|N\|Solid| # CoManga \| |Documentation Status| \| |Donate| \| |GitHub
-release| \| |Github All Releases|
+CoManga
+----------------
+
+|Documentation Status| \| |Donate| \| |GitHub release| \| |Github All Releases|
 
 CoManga is a "Cross-Platform Application" that can download various
 Comics and Manga for free. The application can run on Android, iOS and
@@ -14,7 +16,7 @@ in most places.
 Table of Content
 ----------------
 
--  `Supported Platforms/OS <#supported-platformsos>`__
+-  `Supported Platforms/OS <#supported-platforms-os>`__
 -  `Where To Download CoManga From? <#where-to-download-comanga-from>`__
 -  `Where Does CoManga Place The Files I
    Download? <#where-does-comanga-place-the-files-i-download>`__
@@ -24,24 +26,17 @@ Table of Content
    Pain? <#why-no-ios-build-why-do-i-have-to-go-through-such-a-pain>`__
 -  `Installing The Application <#installing-the-application>`__
 -  `Special Permissions <#special-permissions>`__
--  `Opening An Issue/Requesting A
-   Feature <#opening-an-issuerequesting-a-feature>`__
-
+-  `Opening An Issue/Requesting A Feature <#opening-an-issue-requesting-a-feature>`__
    -  `Reporting Issues <#reporting-issues>`__
    -  `Suggesting A Feature <#suggesting-a-feature>`__
-
--  `What are the sources for
-   CoManga? <#what-are-the-sources-for-comanga>`__
--  `What if I Want To Download From Somewhere
-   Else? <#what-if-i-want-to-download-from-somewhere-else>`__
--  `How Long Till We Can Download From Custom
-   Websites? <#how-long-till-we-can-download-from-custom-websites>`__
+-  `What are the sources for CoManga? <#what-are-the-sources-for-comanga>`__
+-  `What if I Want To Download From Somewhere Else? <#what-if-i-want-to-download-from-somewhere-else>`__
+-  `How Long Till We Can Download From Custom Websites? <#how-long-till-we-can-download-from-custom-websites>`__
 -  `Why Xamarin Forms? <#why-xamarin-forms>`__
--  `Contributing To CoManga <#contribution>`__
+-  `Contributing To CoManga <#contributing-to-comanga>`__
 -  `How To Compile <#how-to-compile>`__
--  `Know Issues/Workarounds <#know-issuesworkarounds>`__
--  `CoManga Has Advertisements.
-   Why? <#comanga-has-advertisements-why>`__
+-  `Know Issues/Workarounds <#know-issues-workarounds>`__
+-  `CoManga Has Advertisements. Why? <#comanga-has-advertisements-why>`__
 -  `Changelog <https://github.com/Xonshiz/CoManga/blob/master/Changelog.md>`__
 -  `Contributors <https://github.com/Xonshiz/CoManga/blob/master/Contributors.md>`__
 -  `Donors <https://github.com/Xonshiz/CoManga/blob/master/Donors.md>`__
@@ -127,8 +122,10 @@ developer account is though.
 Installing The Application
 ==========================
 
-You need to have certain tools beforehand. So,get : 1.) Visual Studio
-(Community Version Will Do). 2.) Xamarin
+You need to have certain tools beforehand. So,get :
+1.) Visual Studio
+(Community Version Will Do).
+2.) Xamarin
 
 For installing the application on respective OS, follow the guides
 below. #### Android Download the "com.xonshiz.CoManga.apk" from the
