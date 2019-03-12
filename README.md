@@ -88,7 +88,7 @@ It's as easy as that.
 Currently there's no build for iOS. So, you'll have to compile the project yourself. Check the ["How To Compile"](#how-to-compile) section for details. Note that once you deploy/build the application once on your iOS device, you need not repeat the same steps again and again. It'll install the application on your device, so you can just fire it up and use it.
 
 #### UWP
-UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section. You can download the application from there and run it like any other application.
+UWP app is also available in the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) section. You can download the application from there and run it like any other application. You need to download "UWP.CoManga.zip" file and extract it somewhere. Then double click on "comic_dl.UWP_1.0.0.0_x86_x64_arm.appxbundle" and when windows prompts, click on "INSTALL". You're done.
 
 
 # Special Permissions
