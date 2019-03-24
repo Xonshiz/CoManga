@@ -26,7 +26,7 @@
                Margin="5"
                Text="Comic-dl is a cross-platform application to download Comics and Manga easily from a single point. You can search Manga from this tool as well. If you want a CLI, go over to my Github and look for Comic-dl." />
         
-       <Label Text="Version : 2019-03-08"
+       <Label Text="Version : 2019-03-24"
               Grid.Row="1"
               Grid.Column="0"
               FontSize="Medium"
