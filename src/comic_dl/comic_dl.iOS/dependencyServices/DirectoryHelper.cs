@@ -8,6 +8,7 @@ using Foundation;
 using UIKit;
 using Xamarin.Forms;
 using comic_dl.interace;
+using System.Threading.Tasks;
 
 [assembly: Dependency(typeof(DirectoryHelper))]
 namespace comic_dl.iOS
@@ -47,7 +48,7 @@ namespace comic_dl.iOS
             return false;
         }
 
-        public bool CreateFile(string directoryName, byte[] contentToWrite)
+        public Task<bool> CreateFile(string directoryName, byte[] contentToWrite)
         {
             var filePath = documentBasePath + directoryName;
             if (!File.Exists(filePath))
@@ -55,14 +56,14 @@ namespace comic_dl.iOS
                 try
                 {
                     File.WriteAllBytes(directoryName, contentToWrite);
-                    return true;
+                    return Task.FromResult(true);
                 }
                 catch (Exception)
                 {
-                    return false;
+                    return Task.FromResult(false);
                 }
             }
-            return false;
+            return Task.FromResult(false);
         }
     }
 }

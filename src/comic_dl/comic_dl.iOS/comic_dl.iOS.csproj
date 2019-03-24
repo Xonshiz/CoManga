@@ -621,6 +621,9 @@
     <PackageReference Include="HtmlAgilityPack">
       <Version>1.9.1</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Services.Store.SDK">
+      <Version>10.1705.16001</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>
     </PackageReference>
@@ -643,16 +646,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="customRenderer\" />
-    <Folder Include="images\" />
     <Folder Include="Assets.xcassets\ic_comic.imageset\" />
+    <Folder Include="Assets.xcassets\ic_completed.imageset\" />
+    <Folder Include="Assets.xcassets\ic_download.imageset\" />
+    <Folder Include="Assets.xcassets\ic_latest.imageset\" />
     <Folder Include="Assets.xcassets\ic_manga.imageset\" />
     <Folder Include="Assets.xcassets\ic_ongoing.imageset\" />
-    <Folder Include="Assets.xcassets\ic_completed.imageset\" />
-    <Folder Include="Assets.xcassets\ic_latest.imageset\" />
-    <Folder Include="Assets.xcassets\ic_whatshot.imageset\" />
-    <Folder Include="Assets.xcassets\ic_download.imageset\" />
     <Folder Include="Assets.xcassets\ic_settings.imageset\" />
+    <Folder Include="Assets.xcassets\ic_whatshot.imageset\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_completed%401x.png" />

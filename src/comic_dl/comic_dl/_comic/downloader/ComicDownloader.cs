@@ -55,7 +55,7 @@ namespace comic_dl._comic.downloader
                         if (contents == null) // If there's nothing, just move onto the next loop.
                             continue;
 
-                        bool isFileDownloaded = DependencyService.Get<IDirectory>().CreateFile(filePath, contents);
+                        bool isFileDownloaded = await DependencyService.Get<IDirectory>().CreateFile(filePath, contents);
 
 
                         if (!isFileDownloaded)

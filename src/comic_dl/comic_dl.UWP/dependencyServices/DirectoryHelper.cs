@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(DirectoryHelper))]
@@ -48,23 +49,39 @@ namespace comic_dl.UWP.dependencyServices
             return false;
         }
 
-        public bool CreateFile(string directoryName, byte[] contentToWrite)
+        public async Task<bool> CreateFile(string directoryName, byte[] contentToWrite)
         {
-            //var filePath = Path.Combine(documentBasePath, directoryName);
-            var filePath = Windows.Storage.DownloadsFolder.CreateFileAsync(directoryName);
-            if (!File.Exists(Convert.ToString(filePath)))
+            List<string> fileNames = directoryName.Split('/').ToList();
+            string downloadType = fileNames[1];
+            string comicName = fileNames[2];
+            string comicChapter = fileNames[3];
+            string comicFileName = fileNames[4];
+            StorageFile destinationFile;
+            StorageFolder downloadsFolder;
+            try
             {
-                try
+                downloadsFolder = await DownloadsFolder.CreateFolderAsync(downloadType + @"\" + comicName + @"\" + comicChapter + @"\");
+                string folderToken = Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.Add(downloadsFolder);
+                ApplicationData.Current.LocalSettings.Values["folderToken"] = folderToken;
+                destinationFile = await downloadsFolder.CreateFileAsync(comicFileName, CreationCollisionOption.ReplaceExisting);
+
+                await Windows.Storage.FileIO.WriteBytesAsync(destinationFile, contentToWrite);
+                return true;
+                // File.WriteAllBytes(destinationFile.Path, contentToWrite);
+            }
+            catch (Exception ex)
+            {
+                if (ApplicationData.Current.LocalSettings.Values["folderToken"] != null)
                 {
-                    File.WriteAllBytes(directoryName, contentToWrite);
+                    string token = ApplicationData.Current.LocalSettings.Values["folderToken"].ToString();
+                    downloadsFolder = await Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.GetFolderAsync(token);
+                    destinationFile = await downloadsFolder.CreateFileAsync(comicFileName, CreationCollisionOption.ReplaceExisting);
+                    //File.WriteAllBytes(destinationFile.Path, contentToWrite);
+                    await Windows.Storage.FileIO.WriteBytesAsync(destinationFile, contentToWrite);
                     return true;
                 }
-                catch (Exception)
-                {
-                    return false;
-                }
+                return false;
             }
-            return false;
         }
     }
 }

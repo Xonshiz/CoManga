@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -53,7 +53,7 @@ namespace comic_dl.Droid.dependencyServices
             return false;
         }
 
-        public bool CreateFile(string directoryName, byte[] contentToWrite)
+        public Task<bool> CreateFile(string directoryName, byte[] contentToWrite)
         {
             var filePath = Path.Combine(documentBasePath, directoryName);
             if (!File.Exists(filePath))
@@ -61,14 +61,14 @@ namespace comic_dl.Droid.dependencyServices
                 try
                 {
                     File.WriteAllBytes(directoryName, contentToWrite);
-                    return true;
+                    return Task.FromResult(true);
                 }
                 catch (Exception)
                 {
-                    return false;
+                    return Task.FromResult(false);
                 }
             }
-            return false;
+            return Task.FromResult(false);
         }
     }
 }
