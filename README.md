@@ -44,13 +44,24 @@ CoManga supports :
 * UWP
 
 # Where To Download CoManga From?
-Currently, you can download the Android and UWP (Windows 10) builds/packages from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) Section only. I do have future plans to push this to various application stores. For iOS devices, you'll need to build it yourself. Please check that section.
+
+#### Android
+Currently, you can download the Android builds/packages from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) Section only. 
+
+#### iOS
+You'll have to download the source code and compile it yourself. Please refer to the "Compiling" section to know more.
+
+#### UWP (Windows 10)
+You can get CoManga directly form the windows store by following this link : [CoManga UWP](https://www.microsoft.com/en-us/p/comanga/9n81f8b5ww93)
+
+
+I do have future plans to push this to various application stores. For iOS devices, you'll need to build it yourself. Please check that section.
 
 # Where Does CoManga Place The Files I Download?
 Since Xamarin Forms is a cross-platform app. developement framework, there are certain things that you need to do platform dependently and getting correct write permissions to save files and creating directories in custom locations is a little tricky. At least it is for me. So, I'm learning along the way and over the time, you'll definitely get a better experience. So, these are some locations you can find your downloaded Comics/Manga. Check the platform-wise locations :
 
 #### Android
-You need to browse to your device's "Internal Storage" and there you'll see a folder named "CoManga". Inside that folder you'll find your Comics/Manga under their own respective folders.
+You need to browse to your device's `"Internal Storage"` and there you'll see a folder named "CoManga". Inside that folder you'll find your Comics/Manga under their own respective folders.
 
 #### iOS
 If you're on iOS, then you're compiling the project and the files will be stored in temp folders of the Simulator. There are multiple steps to this. First, make sure you sort all the folders based on "Last Modified". After that, go to this location :
