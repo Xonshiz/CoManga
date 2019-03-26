@@ -55,6 +55,23 @@ CoManga supports :
 Where To Download CoManga From?
 ===============================
 
+Android
+^^^^^^^
+
+Currently, you can download the Android builds/packages from the [Latest Releases](https://github.com/Xonshiz/CoManga/releases/latest) Section only. 
+
+iOS
+^^^^^^^
+
+You'll have to download the source code and compile it yourself. Please refer to the "Compiling" section to know more.
+
+UWP
+^^^^^^^
+
+You can get CoManga directly form the windows store by following this link : [CoManga UWP](https://www.microsoft.com/en-us/p/comanga/9n81f8b5ww93)
+
+
+
 Currently, you can download the Android and UWP (Windows 10)
 builds/packages from the `Latest
 Releases <https://github.com/Xonshiz/CoManga/releases/latest>`__ Section
