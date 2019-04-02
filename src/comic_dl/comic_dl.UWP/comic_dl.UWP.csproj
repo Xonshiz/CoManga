@@ -100,6 +100,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="customRenderer\AdViewRenderer.cs" />
+    <Compile Include="customRenderer\MangaAdViewRenderer.cs" />
     <Compile Include="dependencyServices\DirectoryHelper.cs" />
     <Compile Include="dependencyServices\SQLiteDb.cs" />
     <Compile Include="MainPage.xaml.cs">

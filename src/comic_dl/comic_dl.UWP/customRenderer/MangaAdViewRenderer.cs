@@ -7,18 +7,18 @@ using Microsoft.Advertising.Ads;
 using Microsoft.Advertising.WinRT.UI;
 using Windows.System.Profile;
 
-[assembly: ExportRenderer(typeof(comic_dl.Controls.AdControlView), typeof(comic_dl.UWP.customRenderer.AdViewRenderer))]
+[assembly: ExportRenderer(typeof(comic_dl.Controls.MangaDetailAdViewControl), typeof(comic_dl.UWP.customRenderer.MangaAdViewRenderer))]
 namespace comic_dl.UWP.customRenderer
 {
 #pragma warning disable CS0618 // Type or member is obsolete
-    public class AdViewRenderer : ViewRenderer<Controls.AdControlView, AdControl>
+    public class MangaAdViewRenderer : ViewRenderer<Controls.MangaDetailAdViewControl, AdControl>
     {
         string bannerId = "1100041955";
         AdControl adView;
         string applicationID = "9n81f8b5ww93";
         bool isRegist = false;
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Controls.AdControlView> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Controls.MangaDetailAdViewControl> e)
         {
             base.OnElementChanged(e);
 
