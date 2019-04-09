@@ -16,6 +16,8 @@ UWP. It has features like :
  - Downloads all the chapters available for a series. 
  - Skip if the file has already been downloaded. 
  - Show human readable error(s) in most places.
+ 
+ P.S : Track the upcoming features and work status at [CoManga's Trello](https://trello.com/b/z4EFWGm4/comanga)
 
 Table of Content
 ----------------
