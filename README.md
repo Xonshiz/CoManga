@@ -12,6 +12,8 @@ CoManga is a "Cross-Platform Application" that can download various Comics and M
 - Skip if the file has already been downloaded.
 - Show human readable error(s) in most places.
 
+P.S : Track the upcoming features and work status at [CoManga's Trello](https://trello.com/b/z4EFWGm4/comanga)
+
 ## Table of Content
 
 * [Supported Platforms/OS](#supported-platformsos)
