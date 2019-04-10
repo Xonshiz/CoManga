@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="comic_dl.Pages.manga.MangaDetails"
-             xmlns:ads="clr-namespace:comic_dl.Controls;assembly=comic_dl">
+             xmlns:ads="clr-namespace:comic_dl.Controls;assembly=comic_dl"
+             Visual="Material">
     <StackLayout>
         <ScrollView>
             <Grid BackgroundColor="#eceff1"

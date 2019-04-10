@@ -9,7 +9,8 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="White"
-            BarTextColor="Black">
+            BarTextColor="Black"
+            Visual="Material">
     <TabbedPage.Children>
         <manga:MangaListing Title="Manga" Icon="ic_manga.png" />
         <comic:ComicListing Title="Comic" Icon="ic_comic.png" />

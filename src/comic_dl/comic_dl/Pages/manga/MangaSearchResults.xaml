@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:Converters="clr-namespace:comic_dl.Converters"
-             x:Class="comic_dl.Pages.manga.MangaSearchResults">
+             x:Class="comic_dl.Pages.manga.MangaSearchResults"
+             Visual="Material">
     <Grid BackgroundColor="#eceff1"
           Padding="5,5,5,0">
         <Grid.RowDefinitions>

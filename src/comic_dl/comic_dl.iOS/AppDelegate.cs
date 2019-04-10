@@ -7,6 +7,7 @@ using Google.MobileAds;
 using ImageCircle.Forms.Plugin.iOS;
 using PanCardView.iOS;
 using UIKit;
+using Xamarin.Forms;
 
 namespace comic_dl.iOS
 {
@@ -26,6 +27,7 @@ namespace comic_dl.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            FormsMaterial.Init();
             LoadApplication(new App());
             CardsViewRenderer.Preserve();
             ImageCircleRenderer.Init();

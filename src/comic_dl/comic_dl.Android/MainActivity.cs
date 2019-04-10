@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Xamarin.Forms;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -24,6 +24,8 @@ namespace comic_dl.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            FormsMaterial.Init(this, bundle);
             CardsViewRenderer.Preserve();
             ImageCircleRenderer.Init();
             MobileAds.Initialize(ApplicationContext, "ca-app-pub-8359860011604747~6496691983");

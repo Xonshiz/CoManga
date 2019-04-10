@@ -5,7 +5,8 @@
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:Converters="clr-namespace:comic_dl.Converters"
-             Title="Download Manga">
+             Title="Download Manga"
+             Visual="Material">
     <Grid BackgroundColor="#eceff1"
           Padding="5,5,5,0">
         <Grid.RowDefinitions>
