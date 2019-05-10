@@ -54,10 +54,10 @@
                          HorizontalOptions="Start"
                          WidthRequest="200"
                          Margin="0,1,0,1"/>
-                    <cards:CarouselView Margin="0,2,0,0"
+                    <cards:CoverFlowView Margin="0,2,0,0"
                                     x:Name="LatestUpdatedChapter_List" 
                                     SelectedItem="LatestUpdatedChapter_ItemSelected">
-                        <cards:CarouselView.ItemTemplate>
+                        <cards:CoverFlowView.ItemTemplate>
                             <DataTemplate>
                                 <ContentView>
                                     <Frame VerticalOptions="CenterAndExpand"
@@ -80,12 +80,11 @@
                                                      Margin="0,0,0,1"/>
                                             <Label Text="{Binding name}" VerticalTextAlignment="Start" TextColor="#000000" FontSize="Small" Margin="0,1,0,1" />
                                         </StackLayout>
-
                                     </Frame>
                                 </ContentView>
                             </DataTemplate>
-                        </cards:CarouselView.ItemTemplate>
-                    </cards:CarouselView>
+                        </cards:CoverFlowView.ItemTemplate>
+                    </cards:CoverFlowView>
                 </StackLayout>
             </Frame>
 
