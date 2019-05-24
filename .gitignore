@@ -18,3 +18,5 @@ src/comic_dl/comic_dl.Android/C:/comic_dl/designtime/libraryprojectimports.cache
 src/comic_dl/comic_dl.Android/C:/comic_dl/designtime/build.props
 src/comic_dl/comic_dl.Android/C:/comic_dl/comic_dl.Android.csprojAssemblyReference.cache
 src/comic_dl/comic_dl.UWP/AppPackages/*
+src/comic_dl/comic_dl.Android/C:/*
+*.stamp
