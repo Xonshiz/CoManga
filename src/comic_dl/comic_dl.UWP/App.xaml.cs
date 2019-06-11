@@ -52,7 +52,7 @@ namespace comic_dl.UWP
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-
+                Xamarin.Forms.Forms.SetFlags("Visual_Experimental");
                 Xamarin.Forms.Forms.Init(e);
                 ImageCircleRenderer.Init();
 

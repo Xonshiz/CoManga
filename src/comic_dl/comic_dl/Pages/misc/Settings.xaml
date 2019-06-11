@@ -15,6 +15,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -25,7 +26,7 @@
                FontSize="Medium"
                FontAttributes="Italic"
                Margin="5"
-               Text="Comic-dl is a cross-platform application to download Comics and Manga easily from a single point. You can search Manga from this tool as well. If you want a CLI, go over to my Github and look for Comic-dl." />
+               Text="CoManga is a cross-platform application to download Comics and Manga easily from a single point. You can search Manga from this tool as well. If you want a CLI, go over to my Github and look for Comic-dl." />
         
        <Label Text="Version : 2019-04-13"
               Grid.Row="1"
@@ -65,5 +66,12 @@
                 Margin="5"
                 Grid.Row="6"
                 Grid.Column="0"/>
+
+        <Label Text="Special Thanks To 'Truong Giang' For Compiling The iOS Distributable."
+               Grid.Row="7"
+              Grid.Column="0"
+              FontSize="Medium"
+              Margin="5"
+              FontAttributes="Italic"/>
     </Grid>
 </ContentPage>
