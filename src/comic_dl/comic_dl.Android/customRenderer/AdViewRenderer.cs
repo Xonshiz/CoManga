@@ -9,10 +9,11 @@ using Xamarin.Forms.Platform.Android;
 namespace comic_dl.Droid.customRenderer
 {
     // Google Test Ad Unit = "ca-app-pub-3940256099942544/6300978111";
+    // My Ad : ca-app-pub-8359860011604747/6645753845
 #pragma warning disable CS0618 // Type or member is obsolete
     public class AdViewRenderer : ViewRenderer<Controls.AdControlView, AdView>
     {
-        string adUnitId = "ca-app-pub-8359860011604747/6645753845";
+        string adUnitId = "ca-app-pub-3940256099942544/6300978111";
         //Note you may want to adjust this, see further down.
         AdSize adSize = AdSize.SmartBanner;
         AdView adView;

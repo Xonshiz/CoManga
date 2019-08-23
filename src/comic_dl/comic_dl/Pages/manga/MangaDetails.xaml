@@ -98,7 +98,7 @@
                     </ListView>
                 </Frame>
 
-                
+
 
                 <ActivityIndicator x:Name="progressBar"
                                    HorizontalOptions="Center"

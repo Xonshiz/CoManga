@@ -13,7 +13,7 @@ namespace comic_dl.internalData
         public static string manga_information = base_manga_url + "/query/web401/info?oid=";
         public static string manga_search_result = base_manga_url + "/query/web401/mrs_search";
         public static string manga_search_result_details = base_manga_url + "/meta";
-        public static string base_comic_url = "https://comicpunch.net/";
+        public static string base_comic_url = "https://comicpunch.net";
         public static string base_comic_image_url = base_comic_url + "/reader/";
         public static string base_comic_search_url = base_comic_url + "/search/node/";
     }

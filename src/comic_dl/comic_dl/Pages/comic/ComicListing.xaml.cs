@@ -52,7 +52,7 @@ namespace comic_dl.Pages.comic
             }
             catch (Exception LatestUpdateFetchingException)
             {
-                Crashes.TrackError(LatestUpdateFetchingException);
+                //Crashes.TrackError(LatestUpdateFetchingException);
                 await DisplayAlert("Dead", "Exception Occurred. Please Try Again After Some Time.", "ok");
             }
         }
