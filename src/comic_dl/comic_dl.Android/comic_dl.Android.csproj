@@ -44,7 +44,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
