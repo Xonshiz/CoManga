@@ -22,12 +22,14 @@ namespace comic_dl.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+            Xamarin.Essentials.Platform.Init(this, bundle); // add this line to your code, it may also be called: bundle
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             FormsMaterial.Init(this, bundle);
             CardsViewRenderer.Preserve();
             ImageCircleRenderer.Init();
+            
             MobileAds.Initialize(ApplicationContext, "ca-app-pub-8359860011604747~6496691983");
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);
             LoadApplication(new App());

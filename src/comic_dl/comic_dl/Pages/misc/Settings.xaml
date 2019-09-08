@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="comic_dl.Pages.misc.Settings"
+             xmlns:Converters="clr-namespace:comic_dl.Converters"
              Title="Customize This App"
              Visual="Material">
     <Grid BackgroundColor="#eceff1"
@@ -16,11 +17,12 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <Label Grid.Row="0"
                Grid.Column="0"
                FontSize="Medium"
@@ -28,7 +30,7 @@
                Margin="5"
                Text="CoManga is a cross-platform application to download Comics and Manga easily from a single point. You can search Manga from this tool as well. If you want a CLI, go over to my Github and look for Comic-dl." />
         
-       <Label Text="Version : 2019-08-23"
+       <Label Text="Version : 2019-09-08"
               Grid.Row="1"
               Grid.Column="0"
               FontSize="Medium"
@@ -48,23 +50,34 @@
               FontSize="Medium"
                Margin="5"
               FontAttributes="Italic"/>
+
+        <StackLayout Grid.Column="0" Grid.Row="4">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Comics" />
+                <Switch x:Name="comicSwitch" IsToggled="False" Toggled="ComicSwitch_Toggled" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Manga" />
+                <Switch x:Name="mangaSwitch" IsToggled="True" Toggled="MangaSwitch_Toggled"/>
+            </StackLayout>
+        </StackLayout>
         
         <Button Text="Github"
                 Clicked="Github_Clicked"
-                Grid.Row="4"
+                Grid.Row="5"
                 Margin="5"
                 Grid.Column="0"/>
         
         <Button Text="Report Issue"
                 Clicked="ReportIssue_Clicked"
-                Grid.Row="5"
+                Grid.Row="6"
                 Margin="5"
                 Grid.Column="0"/>
 
         <Button Text="Donate"
                 Clicked="Donate_Clicked"
                 Margin="5"
-                Grid.Row="6"
+                Grid.Row="7"
                 Grid.Column="0"/>
     </Grid>
 </ContentPage>

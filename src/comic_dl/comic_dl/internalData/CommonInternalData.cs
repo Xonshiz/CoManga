@@ -10,5 +10,12 @@ namespace comic_dl.internalData
         public static List<string> failedDownloadLinks = new List<string>() { };
         public enum DownloadType { MangaRock, RCO }
         public enum RefreshType { HotLatestItems, LatestItems}
+
+        /*
+         * HomeResultPreference = Which page does the user want to watch when they open the app, i.e., Manga or Comic.
+         */
+        public enum UserSettingkey { HomeResultPreference }
+
+        public string googleMangaAdsId = "";
     }
 }
