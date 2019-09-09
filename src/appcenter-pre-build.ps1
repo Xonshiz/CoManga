@@ -8,4 +8,4 @@
  
 # Install the SDKs (use the "qn" flag to install silently)
  Write-Output "installing $adSdkPath…"
- Start-Process $adSdkPath -ArgumentList -Wait
+ Start-Process $adSdkPath -ArgumentList "/q" -Wait
