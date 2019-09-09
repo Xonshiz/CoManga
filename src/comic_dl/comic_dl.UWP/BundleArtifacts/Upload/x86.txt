@@ -1,2 +1,2 @@
-MainPackage=C:\Users\dkanojia\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\x86\Release\Upload\comic_dl.UWP_2.1.0.0_x86.appx
-SymbolPackage=C:\Users\dkanojia\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\x86\Release\Upload\comic_dl.UWP_2.1.0.0\comic_dl.UWP_2.1.0.0_x86.appxsym
+MainPackage=C:\Users\dkanojia\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\x86\Release\Upload\comic_dl.UWP_2.1.1.0_x86.appx
+SymbolPackage=C:\Users\dkanojia\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\x86\Release\Upload\comic_dl.UWP_2.1.1.0\comic_dl.UWP_2.1.1.0_x86.appxsym
