@@ -8,7 +8,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CardsView" Version="2.2.0" />
+    <PackageReference Include="CardsView" Version="2.2.1" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.12" />
     <PackageReference Include="Microsoft.Services.Store.SDK" Version="10.1705.16001" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
