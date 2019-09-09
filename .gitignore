@@ -20,3 +20,4 @@ src/comic_dl/comic_dl.Android/C:/comic_dl/comic_dl.Android.csprojAssemblyReferen
 src/comic_dl/comic_dl.UWP/AppPackages/*
 src/comic_dl/comic_dl.Android/C:/*
 *.stamp
+*.pfx

@@ -4,7 +4,7 @@
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
          xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
          IgnorableNamespaces="uap mp uap3">
-  <Identity Name="27942Xonshiz.CoManga" Publisher="CN=90C50B98-F768-4502-9FF9-CDCBD32EB1DE" Version="2.1.1.0" />
+  <Identity Name="27942Xonshiz.CoManga" Publisher="CN=90C50B98-F768-4502-9FF9-CDCBD32EB1DE" Version="2.1.5.0" />
   <mp:PhoneIdentity PhoneProductId="f1b28414-74f7-44aa-8950-c260a0e58bea" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>CoManga</DisplayName>
