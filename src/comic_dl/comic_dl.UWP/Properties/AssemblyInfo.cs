@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Comic_dl")]
+[assembly: AssemblyTitle("CoManga")]
 [assembly: AssemblyDescription("An application that can download various comics and manga all in one place. Based on Xamarin.Forms 3.5.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Xonshiz")]
-[assembly: AssemblyProduct("Comic_dl")]
+[assembly: AssemblyProduct("CoManga")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("Xonshiz")]
 [assembly: AssemblyCulture("")]

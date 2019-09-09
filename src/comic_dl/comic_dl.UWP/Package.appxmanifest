@@ -4,11 +4,11 @@
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
          xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
          IgnorableNamespaces="uap mp uap3">
-  <Identity Name="8c5bdaa1-7509-4aca-bd99-321c57de3c9f" Publisher="CN=abebafeb-fba0-429c-af82-4881b47e750e" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="27942Xonshiz.CoManga" Publisher="CN=90C50B98-F768-4502-9FF9-CDCBD32EB1DE" Version="2.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="f1b28414-74f7-44aa-8950-c260a0e58bea" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>CoManga</DisplayName>
-    <PublisherDisplayName>abebafeb-fba0-429c-af82-4881b47e750e</PublisherDisplayName>
+    <PublisherDisplayName>Xonshiz</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>

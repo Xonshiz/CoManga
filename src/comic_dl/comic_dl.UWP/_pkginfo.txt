@@ -1,0 +1,1 @@
+C:\Users\dkanojia\Documents\GitHub\CoManga\src\comic_dl\comic_dl.UWP\bin\ARM\Release\Upload\comic_dl.UWP_1.1.0.0\comic_dl.UWP_1.1.0.0_x86_x64_arm.appxbundle
