@@ -1,5 +1,5 @@
 # Predefined Variables
-$adSdkUrl = "https://admediator.gallerycdn.vsassets.io/extensions/admediator/microsoftadvertisingsdk/10.1.00/1548989510766/MicrosoftAdvertisingSDK.msi"
+ $adSdkUrl = "https://admediator.gallerycdn.vsassets.io/extensions/admediator/microsoftadvertisingsdk/10.1.00/1548989510766/MicrosoftAdvertisingSDK.msi"
  $adSdkPath = Join-Path $env:TEMP "MicrosoftAdvertisingSDK.msi"
  
 # Download the files to local temp folder
