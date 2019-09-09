@@ -1,5 +1,3 @@
-NuGet restore src\**\*.sln
-
 # Predefined Variables
 $adSdkUrl = "https://admediator.gallerycdn.vsassets.io/extensions/admediator/microsoftadvertisingsdk/10.1.00/1548989510766/MicrosoftAdvertisingSDK.msi"
  $adSdkPath = Join-Path $env:TEMP "MicrosoftAdvertisingSDK.msi"
@@ -10,7 +8,4 @@ $adSdkUrl = "https://admediator.gallerycdn.vsassets.io/extensions/admediator/mic
  
 # Install the SDKs (use the "qn" flag to install silently)
  Write-Output "installing $adSdkPath…"
- Start-Process $adSdkPath -ArgumentList "/q" -Wait
-
-# Notify if installed
- Write-Output "Installed Microsoft Advertising SDK"
+ Start-Process $adSdkPath -ArgumentList -Wait

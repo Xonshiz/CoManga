@@ -45,11 +45,11 @@ jobs:
 
   - task: NuGetCommand@2
     inputs:
-      restoreSolution: 'src/*.sln'
+      restoreSolution: 'src/**/*.sln'
 
   - task: XamariniOS@2
     inputs:
-      solutionFile: 'src/**/*iOS*.csproj'
+      solutionFile: 'src/**/*.sln'
       configuration: 'Release'
       buildForSimulator: true
       packageApp: false
@@ -59,7 +59,7 @@ jobs:
     vmImage: 'VS2017-Win2016'
 
   variables:
-    solution: 'src/**/*UWP*.csproj'
+    solution: '**/*.sln'
     buildPlatform: 'x86|x64|ARM'
     buildConfiguration: 'Release'
     appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
@@ -69,7 +69,7 @@ jobs:
 
   - task: NuGetCommand@2
     inputs:
-      restoreSolution: 'src/*.sln'
+      restoreSolution: '$(solution)'
 
   - task: VSBuild@1
     inputs:
