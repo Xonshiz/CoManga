@@ -69,7 +69,7 @@ namespace comic_dl.UWP.dependencyServices
                 return true;
                 // File.WriteAllBytes(destinationFile.Path, contentToWrite);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (ApplicationData.Current.LocalSettings.Values["folderToken"] != null)
                 {

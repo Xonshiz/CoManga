@@ -38,9 +38,9 @@ namespace comic_dl.parsers
                         comicCoverImage = ServiceUrl.base_comic_url + Convert.ToString(ComicListNode.ChildNodes[i].ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes[1].Value)
                     });
                 }
-                catch (Exception Ex)
+                catch (Exception)
                 {
-                    Console.WriteLine("I right Now : " + i);
+                    //Console.WriteLine("I right Now : " + i);
                     continue;
                 }
             }
@@ -84,7 +84,7 @@ namespace comic_dl.parsers
                 comicDetailStructure.comicImage = ServiceUrl.base_comic_url + comicCover.Attributes[1].DeEntitizeValue;
                 comicDetailStructure.comicDescription = description.FirstChild.InnerText;
             }
-            catch (Exception Ex)
+            catch (Exception)
             {
                 comicDetailStructure.comicTitle = (string.IsNullOrEmpty(comicDetailStructure.comicTitle)) ? "Title Not Found" : comicDetailStructure.comicTitle;
                 comicDetailStructure.comicPubisher = (string.IsNullOrEmpty(comicDetailStructure.comicPubisher)) ? "None" : comicDetailStructure.comicPubisher;
@@ -109,7 +109,7 @@ namespace comic_dl.parsers
                             chapterLink = chapter.ChildNodes[0].Attributes[0].Value
                         });
                     }
-                    catch (Exception Ex)
+                    catch (Exception)
                     {
                         continue;
                     }

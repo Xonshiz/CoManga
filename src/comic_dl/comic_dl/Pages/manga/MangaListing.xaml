@@ -54,7 +54,7 @@
                          HorizontalOptions="Start"
                          WidthRequest="200"
                          Margin="0,1,0,1"/>
-                    <cards:CoverFlowView Margin="0,2,0,0"
+                    <!--<cards:CoverFlowView Margin="0,2,0,0"
                                     x:Name="LatestUpdatedChapter_List" 
                                     SelectedItem="LatestUpdatedChapter_ItemSelected">
                         <cards:CoverFlowView.ItemTemplate>
@@ -84,7 +84,28 @@
                                 </ContentView>
                             </DataTemplate>
                         </cards:CoverFlowView.ItemTemplate>
-                    </cards:CoverFlowView>
+                    </cards:CoverFlowView>-->
+
+                    <CollectionView x:Name="LatestUpdatedChapter_List"
+                                    SelectedItem="LatestUpdatedChapter_ItemSelected"
+                                    HorizontalScrollBarVisibility="Always"
+                                    FlowDirection="RightToLeft">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Vertical"
+                                                 Padding="5,5,5,0"
+                                                 VerticalOptions="CenterAndExpand"
+                                                 HorizontalOptions="CenterAndExpand">
+                                    <ImageButton Clicked="LatestUpdatedChapter_ItemSelected"
+                                                     CommandParameter="{Binding oid}"
+                                                     Source="{Binding thumbnail}"
+                                                     BackgroundColor="White"
+                                                     Margin="0,0,0,1"/>
+                                    <Label Text="{Binding name}" VerticalTextAlignment="Start" TextColor="#000000" FontSize="Small" Margin="0,1,0,1" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </Frame>
 

@@ -53,7 +53,7 @@ namespace comic_dl.Pages.comic
             catch (Exception LatestUpdateFetchingException)
             {
                 //Crashes.TrackError(LatestUpdateFetchingException);
-                await DisplayAlert("Dead", "Exception Occurred. Please Try Again After Some Time.", "ok");
+                await DisplayAlert("Dead", LatestUpdateFetchingException.ToString(), "ok");
             }
         }
 

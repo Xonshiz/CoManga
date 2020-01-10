@@ -30,7 +30,7 @@ namespace comic_dl.Pages
 		{
             InitializeComponent ();
             lastLoadedTime = DateTime.Now;
-            LatestUpdatedChapter_List.UserInteracted += CarouselView_UserInteracted;
+            //LatestUpdatedChapter_List.UserInteracted += CarouselView_UserInteracted;
         }
 
         protected async override void OnAppearing()

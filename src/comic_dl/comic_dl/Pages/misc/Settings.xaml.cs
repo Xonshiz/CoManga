@@ -24,17 +24,17 @@ namespace comic_dl.Pages.misc
 
         void Github_Clicked(object sender, System.EventArgs e)
         {
-            Device.OpenUri(new Uri("https://github.com/Xonshiz/"));
+            Launcher.TryOpenAsync(new Uri("https://github.com/Xonshiz/"));
         }
 
         void ReportIssue_Clicked(object sender, System.EventArgs e)
         {
-            Device.OpenUri(new Uri("https://github.com/Xonshiz/CoManga/issues/new"));
+            Launcher.TryOpenAsync(new Uri("https://github.com/Xonshiz/CoManga/issues/new"));
         }
 
         void Donate_Clicked(object sender, System.EventArgs e)
         {
-            Device.OpenUri(new Uri("https://www.paypal.me/Xonshiz"));
+            Launcher.TryOpenAsync(new Uri("https://www.paypal.me/Xonshiz"));
         }
 
         private void ComicSwitch_Toggled(object sender, ToggledEventArgs e)
